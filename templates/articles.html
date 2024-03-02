@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} {% endblock %}
+
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+
+
+        <div id="index">
+            <h2>Tous les articles</h2>
+            {% for article in articles.items %}
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.content }}</p>
+                <p>Publié par: <a href="{{ url_for('profil', username=article.user.username) }}">{{ article.user.username }}</a></p>
+                <!-- Ajoutez d'autres détails de l'article si nécessaire -->
+                {% if current_user == article.user %}
+                    <a href="{{ url_for('supprimer_article', article_id=article.id) }}">Supprimer</a>
+                    <a href="{{ url_for('editer_article', article_id=article.id) }}">Modifier</a>
+
+                {% endif %} 
+            {% endfor %}
+        
+            {% if articles.has_prev %}
+                <a href="{{ url_for('home', page=articles.prev_num) }}">Page précédente</a>
+            {% endif %}
+            {% if articles.has_next %}
+                <a href="{{ url_for('home', page=articles.next_num) }}">Page suivante</a>
+            {% endif %}
+        </div>
+
+
+{% endblock %}

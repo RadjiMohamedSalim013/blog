@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title%}editer profile{% endblock %}
+
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div id="editer_profil">
+        <h2>Éditer l'article</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <input type="text" name="titre" placeholder="Titre" value="{{ article.title }}" required><br>
+            <textarea name="contenu" placeholder="Contenu" required>{{ article.content }}</textarea><br>
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+    </div>
+
+
+{% endblock %}
+
+
+

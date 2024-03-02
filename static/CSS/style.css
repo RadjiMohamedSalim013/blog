@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #ADD8E6;
+    align-items: center;
+
+}
+
+.logo{
+    width: 50%;
+}
+
+
+.navigation{
+    width: 50%;
+}
+
+
+
+.navigation nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+.navigation nav ul li{
+    list-style: none;
+}
+
+.navigation nav ul li a{
+    text-decoration: none;
+}
+
+
+
+/* STYLE POUR INCRIPTON*/
+
+
+/* Style pour le formulaire d'inscription */
+#inscription {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#inscription h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#inscription input[type="text"],
+#inscription input[type="email"],
+#inscription input[type="password"],
+#inscription input[type="file"],
+#inscription button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#inscription button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#inscription button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#inscription p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* STYLE POUR LA CONNEXION*/
+
+
+/* Style pour le formulaire de connexion */
+#connexion {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#connexion h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#connexion input[type="text"],
+#connexion input[type="password"],
+#connexion button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#connexion button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#connexion button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#connexion p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* STYLE POUR L'AFFICHAGE DES ARTICLES */
+
+
+
+/* STYLE POUR L'EDITION DES ARTICLES */
+
+/* style.css */
+
+#editer_profil {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#editer_profil h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#editer_profil input[type="text"],
+#editer_profil textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#editer_profil textarea {
+    height: 200px;
+}
+
+#editer_profil button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editer_profil button:hover {
+    background-color: #0056b3;
+}
+
+
+@media screen  and (max-width: 767px){
+}

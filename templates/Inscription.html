@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+{% endblock %}
+
+
+{% block content %}
+    <div id="inscription">
+        <h2>Inscription</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
+            <input type="email" name="email" placeholder="Adresse e-mail" required><br>
+            <input type="password" name="password" placeholder="Mot de passe" required><br>
+            <input type="file" name="photo" accept="image/*"><br>  <!-- Champ pour le téléchargement de la photo de profil -->
+            <button type="submit">S'inscrire</button>
+        </form>
+        
+        <p>Déjà inscrit ? <a href="{{ url_for('connexion') }}">Connectez-vous ici</a>.</p>
+    
+    </div>
+
+    {% endblock %}
+
+
+   

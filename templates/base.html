@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Titre par défaut{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <!-- Ajoutez ici vos liens vers les fichiers CSS et JavaScript -->
+</head>
+<body id=>
+    <header>
+        <div class="logo">
+            <h1>messiduCode</h1>
+        </div>
+       
+
+        <div class="navigation" id="nav">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Accueil</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('profil', username=current_user.username) }}">Voir le profil</a></li>
+                    <li><a href="{{ url_for('deconnexion') }}">Déconnexion</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('connexion') }}">Se connecter</a></li>
+                        <li><a href="{{ url_for('inscription') }}"> s'inscrire </a></li>
+                    {% endif %}
+
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ current_year }} Mon Application. Tous droits réservés.</p>
+    </footer>
+
+
+
+
+</body>
+</html>

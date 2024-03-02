@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nouvel article</title>
+</head>
+<body>
+    <h2>Créer un nouvel article</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <input type="text" name="titre" placeholder="Titre" required><br>
+        <textarea name="contenu" placeholder="Contenu" required></textarea><br>
+        <button type="submit">Créer l'article</button>
+    </form>
+</body>
+</html>
