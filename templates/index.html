@@ -10,8 +10,13 @@
 
 {% block content %}
 
-
-
-        <h1>Bienvenu sur mon Blog</h1>
+<div id="index">
+    <h1>Bienvenu sur mon Blog</h1>
+    {% if current_user.is_authenticated %}
+        <div class="nouvel_articles">
+            <a href="{{ url_for('nouvel_article') }}">Créer un nouvel article</a>
+        </div>
+    {% endif %}
+</div>
 
 {% endblock %}

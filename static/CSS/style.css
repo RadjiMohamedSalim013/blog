@@ -134,6 +134,53 @@ header{
 
 
 /* STYLE POUR L'AFFICHAGE DES ARTICLES */
+/* style.css */
+
+#articles {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#articles h2 {
+    margin-bottom: 20px;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.article h3 {
+    margin-bottom: 10px;
+}
+
+.article p {
+    margin-bottom: 10px;
+}
+
+.article a {
+    margin-right: 10px;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
 
 
 
@@ -181,6 +228,76 @@ header{
 #editer_profil button:hover {
     background-color: #0056b3;
 }
+
+
+/* STYLE INDEX */
+
+
+/* STYLE NOUVEL ARTICLES */
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Couleur de fond */
+}
+
+h2 {
+    color: #333; /* Couleur du texte */
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Couleur de fond pour les messages de succès */
+    color: #155724; /* Couleur du texte pour les messages de succès */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Couleur de fond pour les messages d'erreur */
+    color: #721c24; /* Couleur du texte pour les messages d'erreur */
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    height: 350px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
 
 
 @media screen  and (max-width: 767px){

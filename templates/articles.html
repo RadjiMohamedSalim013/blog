@@ -12,11 +12,13 @@
 
 
 
-        <div id="index">
+        <div id="articles">
             <h2>Tous les articles</h2>
             {% for article in articles.items %}
                 <h3>{{ article.title }}</h3>
-                <p>{{ article.content }}</p>
+                    <div class="article">
+                        <p>{{ article.content }}</p>
+                    </div>
                 <p>Publié par: <a href="{{ url_for('profil', username=article.user.username) }}">{{ article.user.username }}</a></p>
                 <!-- Ajoutez d'autres détails de l'article si nécessaire -->
                 {% if current_user == article.user %}
