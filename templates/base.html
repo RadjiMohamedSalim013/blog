@@ -12,7 +12,6 @@
             <h1>Mon Blog</h1>
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('index') }}">Accueil</a></li>
                     {% if current_user.is_authenticated %}
                         <li><a href="{{ url_for('create_post') }}">Créer un Article</a></li>
                         <li><a href="{{ url_for('profile') }}">Mon Profil</a></li>
