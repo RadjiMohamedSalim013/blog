@@ -1,0 +1,151 @@
+/* Reset CSS pour éliminer les marges et les espacements par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en page principale */
+.container {
+    width: 90%; /* Réduit la largeur pour plus de flexibilité */
+    max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    margin: 0 auto;
+}
+
+/* En-tête du profil */
+h1 {
+    font-size: 2rem;
+    color: #282c34; /* Couleur sombre pour le titre */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #282c34; /* Couleur sombre pour les sous-titres */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #61dafb; /* Ligne de séparation */
+    padding-bottom: 0.5rem;
+}
+
+/* Articles */
+.article {
+    background-color: #fff; /* Fond blanc pour les articles */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden; /* Assure que le contenu ne déborde pas */
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    color: #282c34;
+    margin-bottom: 0.5rem;
+}
+
+.article small {
+    display: block;
+    font-size: 0.85rem;
+    color: #888; /* Gris clair pour la date */
+    margin-bottom: 1rem;
+}
+
+.article p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.6; /* Améliore la lisibilité */
+    word-wrap: break-word; /* Assure que les longues chaînes de texte se cassent pour éviter le débordement */
+}
+
+.article a {
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #61dafb; /* Bleu clair */
+}
+
+.btn-primary:hover {
+    background-color: #4fa3b2; /* Bleu légèrement plus foncé au survol */
+}
+
+.btn-secondary {
+    background-color: #282c34; /* Couleur sombre */
+}
+
+.btn-secondary:hover {
+    background-color: #1e2025; /* Couleur encore plus sombre au survol */
+}
+
+.btn-danger {
+    background-color: #e57373; /* Rouge clair */
+}
+
+.btn-danger:hover {
+    background-color: #f44336; /* Rouge plus intense au survol */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+/* Médias queries pour les appareils mobiles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .article h3 {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Médias queries pour les très petits écrans */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Réduit la largeur pour les très petits écrans */
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .article h3 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}

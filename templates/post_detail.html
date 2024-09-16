@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/postdetail.css') }}">
+
+    <h1>{{ post.title }}</h1>
+    <small>Publié par {{ post.author.username }} le {{ post.date_posted.strftime('%d %b %Y') }}</small>
+    <div>
+        <p>{{ post.content }}</p>  <!-- Contenu complet de l'article -->
+    </div>
+    {% if post.author == current_user %}
+        <a href="{{ url_for('edit_post', post_id=post.id) }}" class="btn btn-secondary">Modifier</a>
+        <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}" style="display: inline;">
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?');">Supprimer</button>
+        </form>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Retour à la liste des articles</a>
+{% endblock %}

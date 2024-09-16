@@ -1,0 +1,85 @@
+/* Styles globaux pour le formulaire d'inscription */
+form {
+    max-width: 600px; /* Limite la largeur du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    padding: 2rem; /* Espacement intérieur du formulaire */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour un effet légèrement en relief */
+}
+
+/* Styles pour les labels */
+label {
+    display: block; /* Affiche les labels en bloc pour qu'ils prennent toute la largeur */
+    margin-bottom: 0.5rem; /* Espacement sous les labels */
+    font-weight: bold; /* Met en gras le texte des labels */
+}
+
+/* Styles pour les champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Occupe toute la largeur disponible */
+    padding: 0.75rem; /* Espacement intérieur */
+    margin-bottom: 1rem; /* Espacement sous les champs de saisie */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Ombre intérieure pour un effet légèrement en relief */
+}
+
+/* Styles pour le bouton de soumission */
+input[type="submit"] {
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Retire la bordure par défaut */
+    padding: 0.75rem 1.5rem; /* Espacement intérieur */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+
+/* Styles pour le bouton de soumission au survol */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond bleue plus foncée */
+}
+
+/* Styles pour les messages flash */
+ul {
+    padding: 0;
+    margin: 0 0 1rem 0;
+    list-style: none; /* Retire les puces des listes */
+}
+
+li {
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.info {
+    background-color: #d1ecf1; /* Couleur de fond pour les messages d'information */
+    color: #0c5460; /* Couleur du texte pour les messages d'information */
+}
+
+.success {
+    background-color: #d4edda; /* Couleur de fond pour les messages de succès */
+    color: #155724; /* Couleur du texte pour les messages de succès */
+}
+
+.error {
+    background-color: #f8d7da; /* Couleur de fond pour les messages d'erreur */
+    color: #721c24; /* Couleur du texte pour les messages d'erreur */
+}
+
+/* Styles pour le lien de connexion */
+p a {
+    color: #007bff; /* Couleur du lien */
+    text-decoration: none; /* Retire le soulignement */
+}
+
+p a:hover {
+    text-decoration: underline; /* Ajoute le soulignement au survol */
+}

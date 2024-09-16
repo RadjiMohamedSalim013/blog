@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+
+    <h1>Inscription</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="post">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" name="username" required><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" required><br>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="S'inscrire">
+        <p>Déjà un compte ? <a href="{{ url_for('login') }}">Connectez-vous</a></p>
+
+    </form>
+{% endblock %}

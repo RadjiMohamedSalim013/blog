@@ -1,0 +1,119 @@
+/* Reset CSS pour éliminer les marges et les espacements par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en page principale */
+.container {
+    width: 90%; /* Réduit la largeur pour plus de flexibilité */
+    max-width: 600px; /* Largeur maximale pour les grands écrans */
+    margin: 0 auto;
+    padding: 1rem; /* Ajoute un peu de padding pour les marges internes */
+}
+
+/* Styles pour le titre */
+h1 {
+    font-size: 2rem;
+    color: #282c34; /* Couleur sombre pour le titre */
+    margin-bottom: 1rem;
+    text-align: center; /* Centre le titre */
+}
+
+/* Styles pour les groupes de formulaire */
+.form-group {
+    margin-bottom: 1rem; /* Espacement entre les groupes de formulaire */
+}
+
+label {
+    font-size: 1rem;
+    color: #333; /* Couleur du texte des labels */
+    display: block; /* Force les labels à occuper toute la largeur */
+    margin-bottom: 0.5rem; /* Espacement entre le label et le champ */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 4px; /* Coins arrondis */
+    margin-bottom: 0.5rem; /* Espacement en bas */
+}
+
+textarea {
+    resize: vertical; /* Permet le redimensionnement vertical du textarea */
+}
+
+/* Styles pour le bouton de soumission */
+button[type="submit"] {
+    background-color: #61dafb; /* Bleu clair */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Centre le bouton */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+}
+
+button[type="submit"]:hover {
+    background-color: #4fa3b2; /* Bleu légèrement plus foncé au survol */
+}
+
+/* Médias queries pour les appareils mobiles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Médias queries pour les très petits écrans */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Réduit la largeur pour les très petits écrans */
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Styles pour les champs de formulaire */
+textarea.form-control {
+    width: 100%; /* Occupe toute la largeur du conteneur */
+    height: 300px; /* Hauteur du textarea, ajustez selon vos besoins */
+    padding: 0.5rem; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure grise claire */
+    border-radius: 4px; /* Coins arrondis */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Ombre intérieure */
+    font-size: 1rem; /* Taille de la police */
+    line-height: 1.5; /* Hauteur de ligne pour améliorer la lisibilité */
+}
+
+/* Médias queries pour les petits écrans */
+@media (max-width: 768px) {
+    textarea.form-control {
+        height: 200px; /* Réduit la hauteur pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    textarea.form-control {
+        height: 150px; /* Réduit encore plus la hauteur pour les très petits écrans */
+    }
+}

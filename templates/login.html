@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+    <h1>Connexion</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" required><br>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Se connecter">
+        <p>Pas encore inscrit ? <a href="{{ url_for('register') }}">Créez un compte</a></p>
+
+    </form>
+{% endblock %}

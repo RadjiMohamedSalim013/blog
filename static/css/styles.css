@@ -1,0 +1,72 @@
+/* Reset CSS pour éliminer les marges et les espacements par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en page de base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Alice Blue */
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #282c34; /* Dark Slate Blue */
+    color: #61dafb; /* Light Blue */
+    padding: 1rem 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenu principal */
+main {
+    padding: 2rem;
+}
+
+/* Pied de page */
+footer {
+    background-color: #282c34; /* Dark Slate Blue */
+    color: #61dafb; /* Light Blue */
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
